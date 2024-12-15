@@ -3,8 +3,9 @@ from itertools import product
 
 
 def maximize_expression(K, M, lists):
-    # twoj kod tutaj
-    pass 
+    combinats = product(*lists)
+    return max(sum(x**2 for x in comb) % M for comb in combinats)
+
 
 
 
